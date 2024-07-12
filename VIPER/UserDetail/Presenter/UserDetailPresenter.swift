@@ -9,7 +9,7 @@ import UIKit
 
 
 class UserDetailPresenter: UserDetailPresenterProtocol {
-    var view: UserDetailViewProtocol?
+    weak var view: UserDetailViewProtocol?
     var user: User
     
     var dataSource: UITableViewDataSource?

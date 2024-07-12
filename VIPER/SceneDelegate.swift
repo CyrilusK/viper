@@ -15,8 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
-        let userRouter = UserRouter.start()
-        let initalVC = userRouter.entry
+        let initalVC = UserConfigurator.configure()
         let window = UIWindow(windowScene: scene)
         window.rootViewController = initalVC
         self.window = window

@@ -13,14 +13,8 @@ import UIKit
 
 class UserPresenter: UserPresenterProtocol {
     var router: UserRouterProtocol?
-    
-    var view: UserViewProtocol?
-    
-    var interactor: UserInteractorProtocol? {
-        didSet {
-            interactor?.getUsers()
-        }
-    }
+    weak var view: UserViewProtocol?
+    var interactor: UserInteractorProtocol?
     
     var users = [User]()
     
@@ -30,6 +24,10 @@ class UserPresenter: UserPresenterProtocol {
     init() {
         self.dataSource = UserTableViewDataSource(presenter: self)
         self.delegate = UserTableViewDelegate(presenter: self)
+    }
+    
+    func viewDidLoad() {
+        interactor?.getUsers()
     }
     
     func interactorDidFetchUsers(with result: Result<[User], Error>) {
@@ -43,7 +41,6 @@ class UserPresenter: UserPresenterProtocol {
     }
     
     func didSelectUser(_ user: User) {
-        print("[DEBUG] - DidTapCell")
         router?.navigateToUserDetail(with: user)
     }
 }

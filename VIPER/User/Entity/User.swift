@@ -9,7 +9,7 @@ import UIKit
 
 //model
 
-struct User: Codable {
+struct User: Decodable {
     let id: Int
     let name: String
     let username: String

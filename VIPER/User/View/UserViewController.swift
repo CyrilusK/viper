@@ -22,7 +22,7 @@ class UserViewController: UIViewController, UserViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-
+        presenter?.viewDidLoad() 
         usersTableView.delegate = presenter?.delegate
         usersTableView.dataSource = presenter?.dataSource
         usersTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

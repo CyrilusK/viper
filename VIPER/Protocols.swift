@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol UserViewProtocol {
+protocol UserViewProtocol: AnyObject {
     /// - Parameters:
     var presenter: UserPresenterProtocol? { get set }
     
@@ -23,7 +23,7 @@ protocol UserInteractorProtocol {
     func getUsers()
 }
 
-protocol UserPresenterProtocol {
+protocol UserPresenterProtocol: AnyObject {
     /// - Parameters:
     var router: UserRouterProtocol? { get set }
     var view: UserViewProtocol? { get set }
@@ -36,14 +36,18 @@ protocol UserPresenterProtocol {
     
     func interactorDidFetchUsers(with result: Result<[User], Error>)
     func didSelectUser(_ user: User)
+    func viewDidLoad()
 }
 
 protocol UserRouterProtocol {
     /// - Parameters:
-    var entry: EntryPoint? { get }
+    var entry: UIViewController? { get }
     
-    static func start() -> UserRouterProtocol
     func navigateToUserDetail(with user: User)
+}
+
+protocol UserConfiguratorProtocol {
+    static func configure() -> UIViewController
 }
 
 protocol UserDetailViewProtocol: AnyObject {
@@ -64,9 +68,10 @@ protocol UserDetailPresenterProtocol: AnyObject {
     func viewDidLoad()
 }
 
-protocol UserDetailRouterProtocol: AnyObject {
-    /// - Parameters:
-    var entry: UserDetailViewController? { get }
-    
-    static func start(with user: User) -> UserDetailRouterProtocol
+protocol UserDetailConfiguratorProtocol {
+    static func configure(with user: User) -> UIViewController
 }
+
+protocol UserDetailRouterProtocol: AnyObject {
+}
+

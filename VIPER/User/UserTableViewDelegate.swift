@@ -17,7 +17,6 @@ class UserTableViewDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let user = presenter.users[indexPath.row]
-        print("[DEBUG] - WillTapCell")
         presenter.didSelectUser(user)
     }
 }

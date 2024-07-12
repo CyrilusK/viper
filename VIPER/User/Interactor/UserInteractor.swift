@@ -13,7 +13,7 @@ import UIKit
 
 
 class UserInteractor: UserInteractorProtocol {
-    var presenter: UserPresenterProtocol?
+    weak var presenter: UserPresenterProtocol?
     
     func getUsers() {
         print("[DEBUG] - Start fetching")
