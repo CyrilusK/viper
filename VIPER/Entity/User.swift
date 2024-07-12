@@ -10,7 +10,12 @@ import UIKit
 //model
 
 struct User: Codable {
+    let id: Int
     let name: String
+    let username: String
+    let email: String
+    let phone: String
+    let website: String
 }
 
 enum FetchError: Error {

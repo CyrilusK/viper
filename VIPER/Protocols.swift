@@ -35,6 +35,7 @@ protocol UserPresenterProtocol {
     var delegate: UITableViewDelegate? { get }
     
     func interactorDidFetchUsers(with result: Result<[User], Error>)
+    func didSelectUser(_ user: User)
 }
 
 protocol UserRouterProtocol {
@@ -42,5 +43,30 @@ protocol UserRouterProtocol {
     var entry: EntryPoint? { get }
     
     static func start() -> UserRouterProtocol
+    func navigateToUserDetail(with user: User)
 }
 
+protocol UserDetailViewProtocol: AnyObject {
+    /// - Parameters:
+    var presenter: UserDetailPresenterProtocol? { get set }
+    
+    func updateView()
+}
+
+protocol UserDetailPresenterProtocol: AnyObject {
+    /// - Parameters:
+    var view: UserDetailViewProtocol? { get set }
+    var user: User { get }
+    
+    var dataSource: UITableViewDataSource? { get }
+    var delegate: UITableViewDelegate? { get }
+    
+    func viewDidLoad()
+}
+
+protocol UserDetailRouterProtocol: AnyObject {
+    /// - Parameters:
+    var entry: UserDetailViewController? { get }
+    
+    static func start(with user: User) -> UserDetailRouterProtocol
+}

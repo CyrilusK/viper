@@ -19,6 +19,11 @@
 		A5CB6CFC2C40146300AF032B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6CFB2C40146300AF032B /* Protocols.swift */; };
 		A5CB6D002C4019A000AF032B /* UserTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6CFF2C4019A000AF032B /* UserTableViewDelegate.swift */; };
 		A5CB6D022C4019D900AF032B /* UserTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D012C4019D900AF032B /* UserTableViewDataSource.swift */; };
+		A5CB6D042C4125AD00AF032B /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D032C4125AD00AF032B /* UserDetailRouter.swift */; };
+		A5CB6D062C41264800AF032B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D052C41264800AF032B /* UserDetailViewController.swift */; };
+		A5CB6D082C41270200AF032B /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D072C41270200AF032B /* UserDetailPresenter.swift */; };
+		A5CB6D0A2C412CCC00AF032B /* UserDetailTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D092C412CCC00AF032B /* UserDetailTableViewDataSource.swift */; };
+		A5CB6D0C2C41325100AF032B /* UserDetailTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6D0B2C41325100AF032B /* UserDetailTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		A5CB6CFB2C40146300AF032B /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		A5CB6CFF2C4019A000AF032B /* UserTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewDelegate.swift; sourceTree = "<group>"; };
 		A5CB6D012C4019D900AF032B /* UserTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewDataSource.swift; sourceTree = "<group>"; };
+		A5CB6D032C4125AD00AF032B /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
+		A5CB6D052C41264800AF032B /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		A5CB6D072C41270200AF032B /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		A5CB6D092C412CCC00AF032B /* UserDetailTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewDataSource.swift; sourceTree = "<group>"; };
+		A5CB6D0B2C41325100AF032B /* UserDetailTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,8 @@
 				A5CB6CFB2C40146300AF032B /* Protocols.swift */,
 				A5CB6CFF2C4019A000AF032B /* UserTableViewDelegate.swift */,
 				A5CB6D012C4019D900AF032B /* UserTableViewDataSource.swift */,
+				A5CB6D092C412CCC00AF032B /* UserDetailTableViewDataSource.swift */,
+				A5CB6D0B2C41325100AF032B /* UserDetailTableViewDelegate.swift */,
 				A5CB6CE02C3FEFAF00AF032B /* Assets.xcassets */,
 				A5CB6CE22C3FEFAF00AF032B /* LaunchScreen.storyboard */,
 				A5CB6CE52C3FEFAF00AF032B /* Info.plist */,
@@ -89,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A5CB6CF42C3FF04000AF032B /* UserRouter.swift */,
+				A5CB6D032C4125AD00AF032B /* UserDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -105,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A5CB6CF02C3FF02100AF032B /* UserPresenter.swift */,
+				A5CB6D072C41270200AF032B /* UserDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A5CB6CEC2C3FF00A00AF032B /* UserViewController.swift */,
+				A5CB6D052C41264800AF032B /* UserDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,11 +212,16 @@
 			files = (
 				A5CB6CF52C3FF04000AF032B /* UserRouter.swift in Sources */,
 				A5CB6CF12C3FF02100AF032B /* UserPresenter.swift in Sources */,
+				A5CB6D062C41264800AF032B /* UserDetailViewController.swift in Sources */,
+				A5CB6D082C41270200AF032B /* UserDetailPresenter.swift in Sources */,
 				A5CB6CED2C3FF00A00AF032B /* UserViewController.swift in Sources */,
 				A5CB6CFC2C40146300AF032B /* Protocols.swift in Sources */,
 				A5CB6CF32C3FF03200AF032B /* User.swift in Sources */,
+				A5CB6D0C2C41325100AF032B /* UserDetailTableViewDelegate.swift in Sources */,
 				A5CB6CEF2C3FF01600AF032B /* UserInteractor.swift in Sources */,
 				A5CB6CD82C3FEFAE00AF032B /* AppDelegate.swift in Sources */,
+				A5CB6D042C4125AD00AF032B /* UserDetailRouter.swift in Sources */,
+				A5CB6D0A2C412CCC00AF032B /* UserDetailTableViewDataSource.swift in Sources */,
 				A5CB6CDA2C3FEFAE00AF032B /* SceneDelegate.swift in Sources */,
 				A5CB6D002C4019A000AF032B /* UserTableViewDelegate.swift in Sources */,
 				A5CB6D022C4019D900AF032B /* UserTableViewDataSource.swift in Sources */,

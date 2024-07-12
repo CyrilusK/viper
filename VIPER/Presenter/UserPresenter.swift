@@ -41,4 +41,9 @@ class UserPresenter: UserPresenterProtocol {
             view?.updateData(with: "Something went wrong")
         }
     }
+    
+    func didSelectUser(_ user: User) {
+        print("[DEBUG] - DidTapCell")
+        router?.navigateToUserDetail(with: user)
+    }
 }

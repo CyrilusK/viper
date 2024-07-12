@@ -32,4 +32,13 @@ class UserRouter: UserRouterProtocol {
         
         return router
     }
+    
+    func navigateToUserDetail(with user: User) {
+        print("[DEBUG] - navigateToUserDetail ")
+        let userDetailRouter = UserDetailRouter.start(with: user)
+        if let userDetailView = userDetailRouter.entry {
+            //entry?.navigationController?.pushViewController(userDetailView, animated: true)
+            entry?.present(userDetailView, animated: true, completion: nil)
+        }
+    }
 }
